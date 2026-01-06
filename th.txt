@@ -1,0 +1,17 @@
+to create Node Project
+
+==> npm init --y
+==> it will genrate Package.json
+
+==>make a app.js file "this is the main file"
+==>to run this on console cmd--> node app.js
+
+Pass Variable=>
+first we exports the variable in form of object
+Then we load it into main file(app.js)
+Then we excess through dot in object
+
+Pass Function=>
+same as variable but we exports it's refrence 
+then whenever we call just put () behind fun name
+
