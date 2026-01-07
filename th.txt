@@ -15,3 +15,28 @@ Pass Function=>
 same as variable but we exports it's refrence 
 then whenever we call just put () behind fun name
 
+============================================================
+MERN
+mongo
+react
+express 
+node
+
+frontend
+node backend
+
+browser:
+
+js ->server side: node js runtime
+nodejs -->packages..
+
+express: API creation
+express middewalre ramework node + express
+=============================================================
+express application...
+express server..
+
+devtool [For HotReloading..]
+
+npm i nodemon -g  ---> it will not add entry in packag.json  --> it will download globally not the project level
+npm i nodemon --dev  -->it will  add entry in packag.json in devDepedency 
