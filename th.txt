@@ -40,3 +40,16 @@ devtool [For HotReloading..]
 
 npm i nodemon -g  ---> it will not add entry in packag.json  --> it will download globally not the project level
 npm i nodemon --dev  -->it will  add entry in packag.json in devDepedency 
+
+==============================================================================
+
+to make server we use express
+first require express and then make a object like
+const app=express()
+
+then app.listen(port,callback function)
+app.get("url",(req,res)=>{
+    make res pass through json format
+})
+
+whenever localhost:port/url hit=> .get api called 
