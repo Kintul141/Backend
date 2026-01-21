@@ -53,3 +53,85 @@ app.get("url",(req,res)=>{
 })
 
 whenever localhost:port/url hit=> .get api called 
+
+============================================================================
+:hardcode:
+//localhost:3000/test
+app.get("/test", (req, res) => {
+    console.log("Test api called...")
+    res.send("Test api called...")
+})
+
+
+
+
+const users = [
+    { id: 1, name: "kintul", age: 19 },
+    { id: 1, name: "param", age: 11 },
+    { id: 1, name: "gaurav", age: 22 }
+]
+//localhost:3000/users
+app.get("/users", (req, res) => {
+    res.json({
+        message: "Users Api called...",
+        data: users
+
+    })
+})
+=========================================================
+For Data through Database:==>
+
+GET : database -->data fetch ---> frontend....
+POST : frontend <<<--- data  <<->>> database
+PUT  : update
+DELETE : delete
+PATCH  : parital update
+
+folder-struct
+ src
+  -controllers(here we use mongosh query to do operation )
+  -models(Here Make a Schema and bind with Collection)
+  -utils(Db Connection -> here we choose What db is connect..:>)
+  -routes(It is for redirection )
+
+
+
+database mongodb :
+nodejs --> package --> mongodb,mongoose
+
+mongoose is orm package of mongodb
+model --> mongodb 1 collection bind
+
+abc database connected...
+users collection[table] <<-->> userModel class
+users == userModel object
+
+---------------------------------------->>
+
+So here is Flow==>
+
+=>First We make Db Connection
+mongoose.connect(YourDB)
+
+=>Then make a Schema in Model
+mongoose.Schema
+and module.exports=mongoose.model("Collection",Schema)
+
+=>Then Perform operation in controller
+make a Function 
+
+=>Then we Define Router 
+Express.Router()
+
+=>App.js -> app.use(Router)
+
+
+=================================================================
+
+First Req go to App.js=>DB Connection=>Router=>Schema operation =>Controller => Model For Schema
+
+and for optimize we do parent redirection
+like in app.js we do /user 
+so final url will be => localhost:port/user/users
+
+==================================================================

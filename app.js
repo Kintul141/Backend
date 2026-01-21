@@ -1,33 +1,22 @@
 const express = require("express")
-
+//create object | referance of express
 const app = express()
+//required dbConnection file and get connection here...
+const dbConnection = require("./src/utils/dbConnection")
+//call dbConnection function
+dbConnection.dbConnection()
 
+const userRoutes = require("./src/routes/UserRoutes")
+app.use("/user",userRoutes)
+
+const productRoutes=require("./src/routes/ProductRoute")
+app.use("/product",productRoutes)
+
+
+//server create...|| call
+//express server api create || node native ---> http
+//http --> own... || express create...
 const PORT = 3000
-
-app.listen(PORT, () => {
-    console.log(`server started  on PORT ${PORT}`)
-})
-
-
-//localhost:3000/test
-app.get("/test", (req, res) => {
-    console.log("Test api called...")
-    res.send("Test api called...")
-})
-
-
-
-
-const users = [
-    { id: 1, name: "kintul", age: 19 },
-    { id: 1, name: "param", age: 11 },
-    { id: 1, name: "gaurav", age: 22 }
-]
-//localhost:3000/users
-app.get("/users", (req, res) => {
-    res.json({
-        message: "Users Api called...",
-        data: users
-
-    })
+app.listen(PORT,()=>{
+    console.log(`server started on PORT ${PORT}`)
 })
