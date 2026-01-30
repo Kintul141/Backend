@@ -6,11 +6,16 @@ const dbConnection = require("./src/utils/dbConnection")
 //call dbConnection function
 dbConnection.dbConnection()
 
+app.use(express.json())
+
 const userRoutes = require("./src/routes/UserRoutes")
 app.use("/user",userRoutes)
 
-const productRoutes=require("./src/routes/ProductRoute")
-app.use("/product",productRoutes)
+const cafeRoutes=require("./src/routes/CafeMenuRoute")
+app.use("/cafe",cafeRoutes)
+
+// const productRoutes=require("./src/routes/ProductRoute")
+// app.use("/product",productRoutes)
 
 
 //server create...|| call

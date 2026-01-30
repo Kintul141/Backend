@@ -135,3 +135,22 @@ like in app.js we do /user
 so final url will be => localhost:port/user/users
 
 ==================================================================
+
+in model => We define schemas 
+where declararion of variables are there also some condition like enum and all 
+
+after that we doing methods in controller where 
+
+in get method=> find() 
+    post method=> try{create(req.body)}catch(err){err handle}
+    delete method=> findandDeleteByID(id) =>id=req.params.id
+                                             if(deleteUSer){}else{user not found}   
+
+                Route Creation => ("/user/:id") ||  [/:] ->wild character
+    put method=>try{findByIdAndUpdate(id,body,{new:true})
+                id->req.params.id  body->req.body
+                if(updateUser){}else{user not found}
+                }catch(err){handle err}
+============================================================================================
+
+
