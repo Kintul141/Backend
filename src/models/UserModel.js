@@ -16,7 +16,8 @@ const userSchema = new Schema({
     bloodGroup: {
         type:String,
         enum:["A+","A-","B+","B-","AB+","AB-","O+","O-"]
-    }
+    },
+    profilePicPath: {type:String},
 
 })
 //connect userSchema with users collection in connected database

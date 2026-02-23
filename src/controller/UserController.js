@@ -27,7 +27,9 @@ const getUsers =async(req,res)=>{
 const addUser=async(req,res)=>{
     try{
     console.log(req.body)
-    const saveUser=await userSchema.create(req.body)
+    console.log(req.file)
+    // const saveUser=await userSchema.create(req.body)
+    const saveUser=await userSchema.create({...req.body,profilePicPath:req.file.path});
     res.json({
         message:"User Created..",
         data:saveUser

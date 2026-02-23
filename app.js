@@ -17,6 +17,11 @@ app.use("/cafe",cafeRoutes)
 // const productRoutes=require("./src/routes/ProductRoute")
 // app.use("/product",productRoutes)
 
+const carScoutRoutes=require("./src/routes/CarScoutRoute")
+app.use("/carScout",carScoutRoutes)
+
+const uploadRoutes=require("./src/routes/UploadRoutes")
+app.use("/upload",uploadRoutes)
 
 //server create...|| call
 //express server api create || node native ---> http
